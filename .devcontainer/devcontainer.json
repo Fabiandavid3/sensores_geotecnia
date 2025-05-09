@@ -1,5 +1,5 @@
 {
-    "name": "chatbot-genaiops-dev",
+    "name": "chatbot-sensores_geotecnia-dev",
     "image": "mcr.microsoft.com/devcontainers/python:3.10",
     "features": {
         "ghcr.io/devcontainers/features/python:1": {
