@@ -1,22 +1,74 @@
 [
-    {
-        "question": "\u00bfQu\u00e9 cubre el plan de beneficios Northwind Health Plus?",
-        "answer": "El plan Northwind Health Plus cubre atenci\u00f3n m\u00e9dica, dental, de la vista, medicamentos recetados y servicios de salud mental."
-    },
-    {
-        "question": "\u00bfCu\u00e1l es el procedimiento para tomar una licencia por maternidad?",
-        "answer": "Debes notificar a Recursos Humanos al menos 30 d\u00edas antes de la fecha esperada y presentar la documentaci\u00f3n m\u00e9dica correspondiente."
-    },
-    {
-        "question": "\u00bfQu\u00e9 incluye el programa PerksPlus?",
-        "answer": "PerksPlus incluye descuentos en gimnasios, membres\u00edas de bienestar, vales de alimentos y soporte financiero."
-    },
-    {
-        "question": "\u00bfQu\u00e9 responsabilidades tiene un analista de datos seg\u00fan el role library?",
-        "answer": "Seg\u00fan el Role Library, un analista de datos debe recolectar, limpiar y analizar datos para generar reportes estrat\u00e9gicos para el negocio."
-    },
-    {
-        "question": "\u00bfCu\u00e1les son los beneficios est\u00e1ndar de Northwind?",
-        "answer": "Los beneficios est\u00e1ndar incluyen seguro m\u00e9dico b\u00e1sico, vacaciones pagadas, y plan de retiro 401(k)."
-    }
+  {
+    "question": "¿Dónde se encuentra ubicado el movimiento en masa de Ancon Norte?",
+    "answer": "Está ubicado en el municipio de Copacabana, vereda Ancon Norte o Ancon 2. Se accede por la vía Medellín–Girardota, 300 m después de la entrada a Comfama Girardota, tomando una vía paralela por la estación de servicio Zeuss. En vehículo, se accede por el sector Yamaha (km 20), tomando una vía hacia el sur hasta el predio Depobuses."
+  },
+  {
+    "question": "¿Qué tipo de movimiento en masa se presenta en Ancon Norte?",
+    "answer": "Es un movimiento en masa complejo y lento, con múltiples zonas de falla a profundidades de 11 m, 16 m y 22 m. Ha generado deformaciones progresivas en un área aproximada de 7 hectáreas."
+  },
+  {
+    "question": "¿Qué sensores hay instalados en Ancon Norte?",
+    "answer": "Se han instalado sensores como cámaras, TDRs (TDR 11 y TDR 12), GNSS, extensómetros, acelerómetros y un pluviómetro. Algunos están activos y otros fueron retirados."
+  },
+  {
+    "question": "¿Dónde se encuentra ubicado el movimiento en masa de La Bermejala?",
+    "answer": "Se localiza en el corregimiento de Altavista, Medellín. El acceso se realiza por la vía principal a Altavista hasta el sector La Bermejala, donde se identificó un talud con inestabilidad superficial que afecta una vía rural."
+  },
+  {
+    "question": "¿Qué tipo de afectación ha causado el movimiento en La Bermejala?",
+    "answer": "La inestabilidad ha provocado pérdida parcial de banca en una vía rural, afectando la conectividad del sector."
+  },
+  {
+    "question": "¿Qué tipo de monitoreo se realiza en La Bermejala?",
+    "answer": "Se utilizan cámaras de monitoreo instaladas en puntos estratégicos del talud para observar posibles movimientos."
+  },
+  {
+    "question": "¿Dónde está ubicado el talud monitoreado en Atavanza?",
+    "answer": "En Medellín, barrio Rodeo Alto. El talud se ubica en cota superior a la Calle 9A Sur, predio de la Unidad Residencial Atavanza."
+  },
+  {
+    "question": "¿Qué daños ha causado el Deslizamiento 2 en Atavanza?",
+    "answer": "Afectó gravemente el salón social y piscina de la unidad residencial. En 2022 se reactivó, volcando un muro en construcción y obstruyendo la vía."
+  },
+  {
+    "question": "¿Qué sensores están activos actualmente en Atavanza?",
+    "answer": "Solo permanece activa una cámara de monitoreo (código 100502) que permite seguimiento remoto del talud."
+  },
+  {
+    "question": "¿Dónde se encuentra ubicado el movimiento en masa de Montañita?",
+    "answer": "Está ubicado en el municipio de Barbosa, vereda Montañita. El acceso se realiza desde la vía Barbosa–Donmatías por una ruta secundaria rural."
+  },
+  {
+    "question": "¿Qué características tiene el deslizamiento en Montañita?",
+    "answer": "Se trata de un movimiento lento en masa que ha generado deformaciones sobre un camino y amenaza viviendas cercanas."
+  },
+  {
+    "question": "¿Qué sensores se utilizan en el monitoreo en Montañita?",
+    "answer": "Cámaras de monitoreo continuo y sensores de humedad instalados en el talud para detectar saturación del suelo."
+  },
+  {
+    "question": "¿Cuál es la ubicación del talud monitoreado en Pueblo Viejo?",
+    "answer": "El sitio se encuentra en el municipio de Girardota, en la vereda Pueblo Viejo, al occidente del río Medellín."
+  },
+  {
+    "question": "¿Qué eventos recientes se han registrado en Pueblo Viejo?",
+    "answer": "Se registraron deslizamientos activos entre 2020 y 2022, con afectación directa a cultivos y viviendas rurales."
+  },
+  {
+    "question": "¿Qué tipo de intervención se ha realizado en Pueblo Viejo?",
+    "answer": "Se ha realizado cobertura del talud con lonas plásticas y se han hecho recomendaciones para estabilización con drenajes."
+  },
+  {
+    "question": "¿Dónde está ubicado el deslizamiento monitoreado en San José?",
+    "answer": "En el municipio de Itagüí, sector San José. Afecta una ladera urbana adyacente a viviendas multifamiliares."
+  },
+  {
+    "question": "¿Qué tipo de sensores están activos en San José?",
+    "answer": "Una cámara y sensores de aceleración y humedad, con registros enviados en tiempo real al sistema central de SIATA."
+  },
+  {
+    "question": "¿Qué riesgos se han identificado en el deslizamiento de San José?",
+    "answer": "Riesgo estructural para viviendas en la parte alta del talud y pérdida progresiva de material por infiltración de agua."
+  }
 ]
