@@ -18,7 +18,7 @@ vectordb = load_vectorstore_from_disk()
 chain = build_chain(vectordb)
 
 if modo == "🤖 Chatbot":
-    st.title("🤖 Asistente de Recursos Humanos")
+    st.title("🤖 Asistente de Sensores Geotecnia - SIATA ⛰️")
     pregunta = st.text_input("¿Qué deseas consultar?")
 
     if "chat_history" not in st.session_state:
@@ -32,7 +32,7 @@ if modo == "🤖 Chatbot":
     if st.session_state.chat_history:
         for q, a in reversed(st.session_state.chat_history):
             st.markdown(f"**👤 Usuario:** {q}")
-            st.markdown(f"**🤖 Bot:** {a}")
+            st.markdown(f"**🤖⛰️ Bot:** {a}")
             st.markdown("---")
 
 elif modo == "📊 Métricas":
