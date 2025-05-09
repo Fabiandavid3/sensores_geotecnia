@@ -12,7 +12,7 @@ from langchain.evaluation.qa import QAEvalChain
 load_dotenv()
 
 # Configuración
-PROMPT_VERSION = os.getenv("PROMPT_VERSION", "v1_asistente_rrhh")
+PROMPT_VERSION = os.getenv("PROMPT_VERSION", "v1_asistente_geotecnia")
 CHUNK_SIZE = int(os.getenv("CHUNK_SIZE", 512))
 CHUNK_OVERLAP = int(os.getenv("CHUNK_OVERLAP", 50))
 DATASET_PATH = "tests/eval_dataset.json"
@@ -25,7 +25,7 @@ with open(DATASET_PATH) as f:
 vectordb = load_vectorstore_from_disk()
 chain = build_chain(vectordb, prompt_version=PROMPT_VERSION)
 
-# LangChain Evaluator
+# LangChain Evaluator esto es lo que se va a cambiar
 llm = ChatOpenAI(temperature=0)
 langchain_eval = QAEvalChain.from_llm(llm)
 
