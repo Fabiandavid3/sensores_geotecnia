@@ -7,8 +7,7 @@ from dotenv import load_dotenv
 from app.rag_pipeline import load_vectorstore_from_disk, build_chain
 
 from langchain_openai import ChatOpenAI
-from langchain.evaluation import load_evaluator
-
+from langchain.evaluation.criteria import LabeledCriteriaEvalChain
 
 load_dotenv()
 
@@ -27,21 +26,22 @@ CRITERIOS = {
 }
 
 # Cargar dataset
-with open(DATASET_PATH) as f:
+with open(DATASET_PATH, encoding="utf-8") as f:
     dataset = json.load(f)
 
 # Vectorstore y cadena
 vectordb = load_vectorstore_from_disk()
 chain = build_chain(vectordb, prompt_version=PROMPT_VERSION)
 
+# LLM y evaluador
+llm = ChatOpenAI(temperature=0)
+evaluator = LabeledCriteriaEvalChain.from_llm(llm, criteria=CRITERIOS)
 
-# Evaluador con criterios (estructura separada por criterio)
-evaluator = load_evaluator("multi_criteria", llm=llm, criteria=list(CRITERIOS.keys()))
-
-# Establecer experimento MLflow
+# MLflow
 mlflow.set_experiment(f"eval_{PROMPT_VERSION}")
-print(f"\U0001f4ca Experimento MLflow: eval_{PROMPT_VERSION}")
+print(f"📊 Experimento MLflow: eval_{PROMPT_VERSION}")
 
+# Evaluación
 for i, pair in enumerate(dataset):
     pregunta = pair["question"]
     respuesta_esperada = pair["answer"]
@@ -50,26 +50,21 @@ for i, pair in enumerate(dataset):
         result = chain.invoke({"question": pregunta, "chat_history": []})
         respuesta_generada = result["answer"]
 
-        # Evaluar con los criterios definidos
         graded = evaluator.evaluate_strings(
             input=pregunta,
             prediction=respuesta_generada,
             reference=respuesta_esperada
         )
 
-        #Temporal
-        import pprint
-        print(f"\n🧪 Resultado estructurado del evaluador para pregunta {i+1}:")
-        pprint.pprint(graded)
+        for criterio, datos in graded.items():
+            if isinstance(datos, dict):
+                score = datos.get("score", 0)
+                razonamiento = datos.get("reasoning", "")
+            else:
+                score = 1.0 if str(datos).strip().upper() == "Y" else 0.0
+                razonamiento = ""
 
-        print(f"\n\U0001f4e6 Resultado evaluación para pregunta {i+1}/{len(dataset)}:")
-        print(graded)
-
-        for criterio in CRITERIOS:
-            criterio_data = graded.get(criterio, {})
-            score = criterio_data.get("score", 0)
-            razonamiento = criterio_data.get("reasoning", "")
-            score_key = f"{criterio}_score"
+            mlflow.log_metric(f"{criterio}_score", score)
 
             if razonamiento:
                 razonamiento_file = f"{criterio}_reasoning_{i+1}.txt"
@@ -82,5 +77,6 @@ for i, pair in enumerate(dataset):
         mlflow.log_param("chunk_size", CHUNK_SIZE)
         mlflow.log_param("chunk_overlap", CHUNK_OVERLAP)
 
-        print(f"\u2705 Pregunta: {pregunta}")
-        print(f"\U0001f9e0 Respuesta: {respuesta_generada}")
+        print(f"✅ Pregunta: {pregunta}")
+        print(f"🧠 Respuesta: {respuesta_generada}")
+        print(f"📦 Evaluación: {graded}\n")

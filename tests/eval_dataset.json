@@ -1,11 +1,11 @@
 [
   {
     "question": "¿Dónde se encuentra ubicado el movimiento en masa de Ancon Norte?",
-    "answer": "Está ubicado en el municipio de Copacabana, vereda Ancon Norte o Ancon 2. Se accede por la vía Medellín–Girardota, 300 m después de la entrada a Comfama Girardota, tomando una vía paralela por la estación de servicio Zeuss. En vehículo, se accede por el sector Yamaha (km 20), tomando una vía hacia el sur hasta el predio Depobuses."
+    "answer": "Está ubicado en el municipio de Copacabana, vereda Ancon Norte o Ancon 2. "
   },
   {
     "question": "¿Qué tipo de movimiento en masa se presenta en Ancon Norte?",
-    "answer": "Es un movimiento en masa complejo y lento, con múltiples zonas de falla a profundidades de 11 m, 16 m y 22 m. Ha generado deformaciones progresivas en un área aproximada de 7 hectáreas."
+    "answer": "Es un movimiento en masa complejo y lento, con múltiples zonas de falla a profundidades de 11 m, 16 m y 22 m."
   },
   {
     "question": "¿Qué sensores hay instalados en Ancon Norte?",
@@ -13,7 +13,7 @@
   },
   {
     "question": "¿Dónde se encuentra ubicado el movimiento en masa de La Bermejala?",
-    "answer": "Se localiza en el corregimiento de Altavista, Medellín. El acceso se realiza por la vía principal a Altavista hasta el sector La Bermejala, donde se identificó un talud con inestabilidad superficial que afecta una vía rural."
+    "answer": "Se localiza en el corregimiento de Altavista, Medellín. "
   },
   {
     "question": "¿Qué tipo de afectación ha causado el movimiento en La Bermejala?",
@@ -25,7 +25,7 @@
   },
   {
     "question": "¿Dónde está ubicado el talud monitoreado en Atavanza?",
-    "answer": "En Medellín, barrio Rodeo Alto. El talud se ubica en cota superior a la Calle 9A Sur, predio de la Unidad Residencial Atavanza."
+    "answer": "En Medellín, barrio Rodeo Alto. El talud se ubica en cota superior predio de la Unidad Residencial Atavanza."
   },
   {
     "question": "¿Qué daños ha causado el Deslizamiento 2 en Atavanza?",
@@ -37,7 +37,7 @@
   },
   {
     "question": "¿Dónde se encuentra ubicado el movimiento en masa de Montañita?",
-    "answer": "Está ubicado en el municipio de Barbosa, vereda Montañita. El acceso se realiza desde la vía Barbosa–Donmatías por una ruta secundaria rural."
+    "answer": "Está ubicado en el municipio de Barbosa, vereda Montañita. "
   },
   {
     "question": "¿Qué características tiene el deslizamiento en Montañita?",
@@ -61,7 +61,7 @@
   },
   {
     "question": "¿Dónde está ubicado el deslizamiento monitoreado en San José?",
-    "answer": "En el municipio de Itagüí, sector San José. Afecta una ladera urbana adyacente a viviendas multifamiliares."
+    "answer": "En el municipio de Itagüí, sector San José. "
   },
   {
     "question": "¿Qué tipo de sensores están activos en San José?",

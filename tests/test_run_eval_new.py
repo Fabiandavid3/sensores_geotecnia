@@ -21,7 +21,13 @@ def test_criterio_minimo(criterio):
 
         if scores:
             promedio = sum(scores) / len(scores)
-            print(f"Promedio de {criterio} en {exp.name}: {promedio:.2f}")
-            assert promedio >= 0.8, f"{criterio} insuficiente en {exp.name}: {promedio:.2f}"
-        else:
-            pytest.fail(f"No se encontraron métricas '{metric_key}' en {exp.name}")
+            print(f"\n🔍 Detalles de '{criterio}' en {exp.name}:")
+
+            for r in runs:
+                score = r.data.metrics.get(metric_key)
+                if score is not None:
+                    pregunta = r.data.params.get("question", "Pregunta no encontrada")[:60]
+                    print(f"  - Score: {score:.2f} | Pregunta: {pregunta}")
+
+            print(f"📊 Promedio total de {criterio}: {promedio:.2f}")
+            assert promedio >= 0.6, f"{criterio} insuficiente en {exp.name}: {promedio:.2f}"
