@@ -27,9 +27,9 @@ Este proyecto implementa un sistema de Recuperación Aumentada por Generación (
 
 📸 *Recomendación de imagen:* Captura de `data/pdfs/` y los prompts en `app/prompts/`
 
-![data/pdfs/](img\data-pdfs.png)
+![data/pdfs/](img/data-pdfs.png)
 
-![app/prompts/](img\promptv3.png)
+![app/prompts/](img/promptv3.png)
 
 ---
 
