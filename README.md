@@ -25,8 +25,6 @@ Este proyecto implementa un sistema de Recuperación Aumentada por Generación (
   - `v3_directo_flexible`
 - **Dataset de evaluación**: `tests/eval_dataset.json`
 
-📸 *Recomendación de imagen:* Captura de `data/pdfs/` y los prompts en `app/prompts/`
-
 ![data/pdfs/](img/data-pdfs.png)
 
 ![app/prompts/](img/promptv3.png)
@@ -45,7 +43,7 @@ Este proyecto implementa un sistema de Recuperación Aumentada por Generación (
   - `qa_score` (binaria)
   - `clarity_score` (Bonus)
 
-📸 *Recomendación:* Imagen de los resultados en MLflow con todas las métricas
+![MLFlowMetrics](img/MLflow1.png)
 
 ---
 
@@ -57,7 +55,7 @@ Este proyecto implementa un sistema de Recuperación Aumentada por Generación (
   - Razonamiento como parámetro truncado
   - Archivo `.txt` como artifact
 
-📸 *Recomendación:* Vista de artifact subido (`coherence_reasoning_11.txt`)
+![MLFlowMetrics](img/MLflow2.png)
 
 ---
 
@@ -69,7 +67,7 @@ Este proyecto implementa un sistema de Recuperación Aumentada por Generación (
   - Comparaciones por métrica
   - Razonamientos por pregunta/criterio
 
-📸 *Recomendación:* Captura del radar + barra comparativa
+![MLFlowMetrics](img/MLflow3.png)
 
 ---
 
@@ -79,7 +77,7 @@ Este proyecto implementa un sistema de Recuperación Aumentada por Generación (
 - La versión `v1` mostró fallos en claridad y relevancia.
 - Los razonamientos generados permitieron analizar las causas de los errores.
 
-📸 *Recomendación:* Imagen del dashboard con tabla y razonamientos desplegados
+![MLFlowMetrics](img/MLflow4.png)
 
 ---
 
@@ -88,7 +86,7 @@ Este proyecto implementa un sistema de Recuperación Aumentada por Generación (
 - Se integró el criterio `clarity_score` como evaluación adicional.
 - Evaluación: *¿La respuesta es clara, fácil de entender y libre de ambigüedad?*
 
-📸 *Recomendación:* Imagen del `clarity_score` y razonamiento generado.
+![MLFlowMetrics](img/MLflow5.png)
 
 ---
 
