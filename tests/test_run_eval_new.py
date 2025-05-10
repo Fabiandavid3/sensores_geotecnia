@@ -1,33 +1,35 @@
-# tests/test_run_eval.py con nuevos criterios
-
 import mlflow
 import pytest
 
-CRITERIOS = ["correctness", "relevance", "coherence", "toxicity", "harmfulness"]
+# Lista de métricas que se espera evaluar
+METRICAS_ESPERADAS = [
+    "correctness_score",
+    "relevance_score",
+    "coherence_score",
+    "toxicity_score",
+    "harmfulness_score",
+    "qa_score",
+    "clarity_score"
+]
 
-@pytest.mark.parametrize("criterio", CRITERIOS)
-def test_criterio_minimo(criterio):
+UMBRAL_MINIMO = 0.7
+
+@pytest.mark.parametrize("metrica", METRICAS_ESPERADAS)
+def test_eval_scores_minimos(metrica):
     client = mlflow.tracking.MlflowClient()
-    experiments = [e for e in client.search_experiments() if e.name.startswith("eval_")]
+    experiments = [e for e in client.search_experiments() if e.name == "eval_v3_directo_flexible"]
 
-    assert experiments, "No hay experimentos con nombre 'eval_'"
+    assert experiments, "❌ No hay experimentos con nombre que empiece con 'eval_'"
 
     for exp in experiments:
         runs = client.search_runs(experiment_ids=[exp.experiment_id])
-        assert runs, f"No hay ejecuciones en el experimento {exp.name}"
+        assert runs, f"❌ No hay ejecuciones en el experimento {exp.name}"
 
-        metric_key = f"{criterio}_score"
-        scores = [r.data.metrics.get(metric_key, 0) for r in runs if metric_key in r.data.metrics]
+        scores = [r.data.metrics.get(metrica, None) for r in runs if metrica in r.data.metrics]
 
-        if scores:
-            promedio = sum(scores) / len(scores)
-            print(f"\n🔍 Detalles de '{criterio}' en {exp.name}:")
+        if not scores:
+            pytest.fail(f"❌ No se encontraron métricas '{metrica}' en {exp.name}")
 
-            for r in runs:
-                score = r.data.metrics.get(metric_key)
-                if score is not None:
-                    pregunta = r.data.params.get("question", "Pregunta no encontrada")[:60]
-                    print(f"  - Score: {score:.2f} | Pregunta: {pregunta}")
-
-            print(f"📊 Promedio total de {criterio}: {promedio:.2f}")
-            assert promedio >= 0.6, f"{criterio} insuficiente en {exp.name}: {promedio:.2f}"
+        promedio = sum(scores) / len(scores)
+        print(f"📈 Promedio de '{metrica}' en {exp.name}: {promedio:.2f}")
+        assert promedio >= UMBRAL_MINIMO, f"⚠️ Precisión insuficiente para '{metrica}' en {exp.name}: {promedio:.2f}"

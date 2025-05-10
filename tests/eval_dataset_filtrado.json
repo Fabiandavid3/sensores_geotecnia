@@ -1,0 +1,46 @@
+[
+  {
+    "question": "¿Dónde se encuentra ubicado el movimiento en masa de Ancon Norte?",
+    "answer": "Está ubicado en el municipio de Copacabana, vereda Ancon Norte o Ancon 2."
+  },
+  {
+    "question": "¿Qué tipo de movimiento en masa se presenta en Ancon Norte?",
+    "answer": "Es un movimiento en masa complejo y lento, con múltiples zonas de falla a profundidades de 11 m, 16 m y 22 m."
+  },
+  {
+    "question": "¿Qué sensores hay instalados en Ancon Norte?",
+    "answer": "Se han instalado sensores como cámaras, TDRs (TDR 11 y TDR 12), GNSS, extensómetros, acelerómetros y un pluviómetro. Algunos están activos y otros fueron retirados."
+  },
+  {
+    "question": "¿Dónde se encuentra ubicado el movimiento en masa de La Bermejala?",
+    "answer": "Se localiza en el corregimiento de Altavista, Medellín."
+  },
+  {
+    "question": "¿Qué tipo de monitoreo se realiza en La Bermejala?",
+    "answer": "Se utilizan cámaras de monitoreo instaladas en puntos estratégicos del talud para observar posibles movimientos."
+  },
+  {
+    "question": "¿Dónde está ubicado el talud monitoreado en Atavanza?",
+    "answer": "En Medellín, barrio Rodeo Alto. El talud se ubica en cota superior predio de la Unidad Residencial Atavanza."
+  },
+  {
+    "question": "¿Qué sensores están activos actualmente en Atavanza?",
+    "answer": "Solo permanece activa una cámara de monitoreo (código 100502) que permite seguimiento remoto del talud."
+  },
+  {
+    "question": "¿Dónde se encuentra ubicado el movimiento en masa de Montañita?",
+    "answer": "Está ubicado en el municipio de Barbosa, vereda Montañita."
+  },
+  {
+    "question": "¿Qué sensores se utilizan en el monitoreo en Montañita?",
+    "answer": "Cámaras de monitoreo continuo y sensores de humedad instalados en el talud para detectar saturación del suelo."
+  },
+  {
+    "question": "¿Cuál es la ubicación del talud monitoreado en Pueblo Viejo?",
+    "answer": "El sitio se encuentra en el municipio de Girardota, en la vereda Pueblo Viejo, al occidente del río Medellín."
+  },
+  {
+    "question": "¿Qué tipo de sensores están activos en San José?",
+    "answer": "Una cámara y sensores de aceleración y humedad, con registros enviados en tiempo real al sistema central de SIATA."
+  }
+]
