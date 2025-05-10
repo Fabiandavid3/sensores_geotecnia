@@ -27,6 +27,10 @@ Este proyecto implementa un sistema de Recuperación Aumentada por Generación (
 
 📸 *Recomendación de imagen:* Captura de `data/pdfs/` y los prompts en `app/prompts/`
 
+![data/pdfs/](img\data-pdfs.png)
+
+![app/prompts/](img\promptv3.png)
+
 ---
 
 ### ✅ Parte 2: Evaluación automática con LangChain
