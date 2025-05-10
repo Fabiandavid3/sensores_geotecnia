@@ -96,3 +96,11 @@ Este proyecto implementa un sistema de Recuperación Aumentada por Generación (
 
 ```bash
 pip install -r requirements.txt
+
+
+## 👥 Autores del proyecto
+
+Este proyecto fue desarrollado como parte del reto educativo Experiencias en Inteligencia de Negocios- Maestria en Ciencia de Datos 2025 por:
+
+- **Melissa Andrea Ciro Peña**
+- **Fabian David Sanchez Martinez**
