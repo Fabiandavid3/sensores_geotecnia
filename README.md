@@ -53,4 +53,44 @@ Este proyecto implementa un sistema de Recuperación Aumentada por Generación (
   - Razonamiento como parámetro truncado
   - Archivo `.txt` como artifact
 
-📸 *Recomendación:* Vista de artifact sub
+📸 *Recomendación:* Vista de artifact subido (`coherence_reasoning_11.txt`)
+
+---
+
+### 📊 Parte 4: Dashboard mejorado
+
+- Streamlit (`dashboard.py`) visualiza:
+  - Runs por configuración
+  - Radar por pregunta
+  - Comparaciones por métrica
+  - Razonamientos por pregunta/criterio
+
+📸 *Recomendación:* Captura del radar + barra comparativa
+
+---
+
+### 🎤 Parte 5: Reflexión y comparación
+
+- La mejor configuración fue `v3_directo_flexible` con chunks de 512.
+- La versión `v1` mostró fallos en claridad y relevancia.
+- Los razonamientos generados permitieron analizar las causas de los errores.
+
+📸 *Recomendación:* Imagen del dashboard con tabla y razonamientos desplegados
+
+---
+
+### 🚀 BONUS: Nuevo criterio "claridad"
+
+- Se integró el criterio `clarity_score` como evaluación adicional.
+- Evaluación: *¿La respuesta es clara, fácil de entender y libre de ambigüedad?*
+
+📸 *Recomendación:* Imagen del `clarity_score` y razonamiento generado.
+
+---
+
+## 🧪 Cómo ejecutar el proyecto
+
+### 1. Instala dependencias
+
+```bash
+pip install -r requirements.txt
